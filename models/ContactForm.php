@@ -61,7 +61,10 @@ class ContactForm extends ActiveRecord
     public function send()
     {
         if ($this->validate()) {
-            $body = "<div>От кого: $this->email, $this->name</div>
+            $phone = ($this->phone != null or $this->phone != '') ?
+                "<div>Телефон: $this->phone</div>" : "";
+            $body = "<div>От кого: $this->email, $this->name.</div>
+                    $phone
                     <div>Сообщение: $this->message</div>
                     <div>Когда: $this->dt</div>";
             Yii::$app->mailer->compose()

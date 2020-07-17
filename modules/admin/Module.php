@@ -2,6 +2,8 @@
 
 namespace app\modules\admin;
 
+use app\assets\AdminLteAsset;
+use backend\modules\admin\assets\AdminAsset;
 use yii\filters\AccessControl;
 
 /**
@@ -28,10 +30,6 @@ class Module extends \yii\base\Module
                         'allow' => true,
                         'roles' => ['@'],
                     ],
-                    [
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
                 ],
             ],
         ];
@@ -40,7 +38,8 @@ class Module extends \yii\base\Module
     public function init()
     {
         parent::init();
-
-        // custom initialization code goes here
+//        \Yii::$app->view->on(
+//            \yii\base\View::EVENT_BEFORE_RENDER,
+//            function ($event) {AdminLteAsset::register($event->sender);});
     }
 }

@@ -12,4 +12,14 @@ class Article extends ActiveRecord
         {
             return '{{article}}';
         }
+
+    public function rules()
+    {
+        return [
+            [['id', 'active'], 'integer'],
+            [['name', 'seo_url', 'short_desc', 'description'], 'string'],
+            [['dt_create'], 'default', 'value' => null],
+            [['dt_create'], 'datetime', 'format' => 'php:Y-m-d H:i:s'],
+        ];
+    }
 }

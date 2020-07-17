@@ -2,6 +2,7 @@
 
 Yii::setAlias('@storage', dirname(dirname(__DIR__)) . '/storage/web');
 Yii::setAlias('@storageUrl', '/storage/web');
+Yii::setAlias('@vendor', dirname(dirname(__DIR__)) . '/vendor');
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
@@ -13,21 +14,32 @@ $config = [
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',
+            'layout' => 'main'
         ],
     ],
     'components' => [
+        'assetManager' => [
+            'bundles' => [
+                'yii\bootstrap\BootstrapAsset' => [
+                    'css' => ['/lib/bootstrap-4/css/bootstrap.css'],
+                ],
+                'yii\bootstrap\BootstrapPluginAsset' => [
+                    'js' => ['/lib/bootstrap-4/js/bootstrap.js']
+                ],
+            ],
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
-            'loginUrl' => ['admin/login'],
+            'loginUrl' => ['site/login'],
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -46,7 +58,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                ['pattern'=>'/portfolio/<slug>', 'route'=>'portfolio/view'],
+                ['pattern' => '/portfolio/<slug>', 'route' => 'portfolio/view'],
             ],
         ],
 

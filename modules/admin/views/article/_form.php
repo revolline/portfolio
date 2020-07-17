@@ -24,6 +24,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'active')->textInput() ?>
 
+
     <?= $form->field($model, 'dt_create')->textInput() ?>
 
     <div class="form-group">

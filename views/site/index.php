@@ -35,9 +35,9 @@ $this->title = 'My Yii Application';
                     <!-- /top-hedader -->
                 </div>
                 <div class="banner-info">
-                    <div class="col-md-7 header-right">
+                    <div class="col-md-7 col-sm-12 header-right">
                         <h1>Привет !</h1>
-                        <h6>FULLSTACK PHP DEVELOPER</h6>
+                        <h6>FULLSTACK PHP DEVELOPER | TeamLead</h6>
                         <ul class="address">
 
                             <li>
@@ -49,7 +49,7 @@ $this->title = 'My Yii Application';
                             <li>
                                 <ul class="address-text">
                                     <li><b>Возраст</b></li>
-                                    <li>23</li>
+                                    <li>24</li>
                                 </ul>
                             </li>
                             <li>
@@ -79,8 +79,10 @@ $this->title = 'My Yii Application';
 
                         </ul>
                     </div>
-                    <div class="col-md-5 header-left">
-                        <img src="/images/new/123.jpg" alt="">
+                    <div class="col-md-5 col-sm-12  header-left column-header-resize-height" >
+                        <div class="wrapper-photo">
+                            <img src="/images/new/photo.jpg" alt="">
+                        </div>
                     </div>
                     <div class="clearfix"></div>
 
@@ -280,7 +282,32 @@ $this->title = 'My Yii Application';
                         <span></span>
                         <div class="media">
                             <div class="d-flex">
-                                <p>Май 2018 —<br>по настоящее время</p>
+                                <p>Август 2020 —<br> ноябрь 2020</p>
+                            </div>
+                            <div class="media-body">
+                                <h4>WebTeam</h4>
+                                <p class="position">TeamLead</p>
+                                <p>Разрабатывался проект по автоматизации работы с фейсбуком под внутреннее пользование.
+                                </p>
+                                <ul class="media-duties">
+                                    <li>Постановка и распределение задач между разработчиками</li>
+                                    <li>Проведение код ревью</li>
+                                    <li>Выстраивание процессов по работе отдела</li>
+                                    <li>Управление командой разработчиков</li>
+                                    <li>Управление проектом, улучшение существующих решений</li>
+                                    <li>Разработка и поддержка проекта</li>
+                                    <li>Контроль над выполнением задач</li>
+                                    <li>Разработка и проектирование баз данных (MySQL)</li>
+                                    <li>Управление конфликтами</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span></span>
+                        <div class="media">
+                            <div class="d-flex">
+                                <p>Май 2018 —<br> август 2020</p>
                             </div>
                             <div class="media-body">
                                 <h4>PharmZnanie</h4>

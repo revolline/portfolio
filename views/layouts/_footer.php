@@ -14,7 +14,7 @@
                         <h4>Почта</h4>
                         <ul>
                             <li><a href="mailto:smartweb.pw@bk.ru">smartweb.pw@bk.ru</a></li>
-                            <li><a href="mailto:info@kristina-strelchuk.online">info@kristina-strelchuk.online</a></li>
+<!--                            <li><a href="mailto:info@kristina-strelchuk.online">info@kristina-strelchuk.online</a></li>-->
                         </ul>
                     </div>
                 </div>

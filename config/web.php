@@ -3,6 +3,25 @@
 Yii::setAlias('@storage', dirname(dirname(__DIR__)) . '/storage/web');
 Yii::setAlias('@storageUrl', '/storage/web');
 Yii::setAlias('@vendor', dirname(dirname(__DIR__)) . '/vendor');
+Yii::$container->set('dosamigos\tinymce\TinyMce', [
+    'language' => 'ru',
+    'options' => ['rows' => 20],
+    'clientOptions' => [
+        'plugins' => [
+            'advlist autolink lists link charmap hr preview pagebreak',
+            'searchreplace wordcount textcolor visualblocks visualchars code fullscreen nonbreaking',
+            'save insertdatetime media table contextmenu template paste image responsivefilemanager filemanager',
+        ],
+        'toolbar' => 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | responsivefilemanager link image media',
+        'external_filemanager_path' => '/lib/responsive_filemanager/filemanager/',
+        'filemanager_title' => 'Responsive Filemanager',
+        'external_plugins' => [
+            'filemanager' => '/lib/responsive_filemanager/filemanager/plugin.min.js',
+            'responsivefilemanager' => '/lib/responsive_filemanager/tinymce/plugins/responsivefilemanager/plugin.min.js',
+        ],
+        'relative_urls' => false,
+    ]
+]);
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';

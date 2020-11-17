@@ -40,7 +40,7 @@ class ArticleSearch extends Article
      */
     public function search($params)
     {
-        $query = Article::find();
+        $query = Article::find()->where(['active' => 1]);
 
         // add conditions that should always apply here
 
@@ -62,6 +62,7 @@ class ArticleSearch extends Article
             'active' => $this->active,
             'dt_create' => $this->dt_create,
         ]);
+        //var_dump($this);die;
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'seo_url', $this->seo_url])

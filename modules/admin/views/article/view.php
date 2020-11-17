@@ -31,6 +31,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'name',
+            [
+                'label' => 'Категория',
+                'value' => $model->getCategoryName(),
+            ],
             'seo_url:url',
             'short_desc',
             'description:ntext',

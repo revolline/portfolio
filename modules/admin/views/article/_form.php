@@ -12,6 +12,17 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?php
+    $opt = [];
+    $opt['id'] = 'category_id';
+    $opt['class'] = 'form-control';
+   // $opt['multiple'] = 'multiple';
+    $opt['prompt'] = '-- Выберите категорию --';
+    //var_dump($model);die;
+    ?>
+    <?=$form->field($model, 'categoryId')
+        ->dropDownList(\yii\helpers\ArrayHelper::map(\app\models\Category::find()->all(), 'id', 'name'),  $opt) ;?>
+
     <?= $form->field($model, 'id')->textInput() ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
@@ -20,12 +31,14 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'short_desc')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'description')->widget(\dosamigos\tinymce\TinyMce::className());?>
 
-    <?= $form->field($model, 'active')->textInput() ?>
+    <?= $form->field($model, 'active')->checkbox() ?>
 
+    <div class="col-sm-4">
+        <?= $form->field($model, 'dt_create')->textInput(['type' => 'date']) ?>
+    </div>
 
-    <?= $form->field($model, 'dt_create')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

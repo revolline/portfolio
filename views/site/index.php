@@ -174,6 +174,7 @@ $this->title = 'My Yii Application';
                         <p>Python (bs4, Pandas, Django)</p>
                         <p>Паттерны проектирования</p>
                         <p>ООП</p>
+                        <p>nodejs</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -237,6 +238,7 @@ $this->title = 'My Yii Application';
                         <h4>Доп. навыки</h4>
                         <p>Чтение кода</p>
                         <p>GIT, GITFLOW</p>
+                        <p>Docker</p>
                         <p>Tasktrackers (YouTrack, Asana, Jira)</p>
                         <p>SEO-оптимизация</p>
                         <p>Стек LNMP</p>

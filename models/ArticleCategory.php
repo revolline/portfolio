@@ -2,7 +2,8 @@
 
 namespace app\models;
 
-use Yii;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "article_category".
@@ -14,7 +15,7 @@ use Yii;
  * @property Article $article
  * @property Category $category
  */
-class ArticleCategory extends \yii\db\ActiveRecord
+class ArticleCategory extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -32,8 +33,10 @@ class ArticleCategory extends \yii\db\ActiveRecord
         return [
             [['article_id', 'category_id'], 'required'],
             [['article_id', 'category_id'], 'integer'],
-            [['article_id'], 'exist', 'skipOnError' => true, 'targetClass' => Article::className(), 'targetAttribute' => ['article_id' => 'id']],
-            [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
+            [['article_id'], 'exist', 'skipOnError' => true, 'targetClass' => Article::class,
+                'targetAttribute' => ['article_id' => 'id']],
+            [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::class,
+                'targetAttribute' => ['category_id' => 'id']],
         ];
     }
 
@@ -52,20 +55,20 @@ class ArticleCategory extends \yii\db\ActiveRecord
     /**
      * Gets query for [[Article]].
      *
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getArticle()
     {
-        return $this->hasOne(Article::className(), ['id' => 'article_id']);
+        return $this->hasOne(Article::class, ['id' => 'article_id']);
     }
 
     /**
      * Gets query for [[Category]].
      *
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getCategory()
     {
-        return $this->hasOne(Category::className(), ['id' => 'category_id']);
+        return $this->hasOne(Category::class, ['id' => 'category_id']);
     }
 }

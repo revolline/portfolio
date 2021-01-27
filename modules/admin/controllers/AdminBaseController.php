@@ -2,12 +2,10 @@
 
 namespace app\modules\admin\controllers;
 
-use Yii;
-use yii\filters\AccessControl;
 use yii\web\Controller;
 
 /**
- * Admin dase controller
+ * Admin base controller
  *
  * @method void addJsonError($attrName, $errorMessage = null)
  * @method void addJsonErrors($list)
@@ -16,6 +14,8 @@ use yii\web\Controller;
  * @method string sendJsonError($attrName, $errorMessage = null)
  * @method string sendJsonErrors($list)
  * @method string sendJsonResponse($errorsOnlyIfExists = true)
+ *
+ * @property-read array $jsonErrors
  */
 class AdminBaseController extends Controller
 {
@@ -58,15 +58,6 @@ class AdminBaseController extends Controller
             ],
 
         ];
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function beforeAction($action)
-    {
-
-        return parent::beforeAction($action);
     }
 
 }

@@ -27,19 +27,4 @@ class m200722_170151_addTbl__category_article extends Migration
     {
         $this->dropTable('category');
     }
-
-    /*
-    // Use up()/down() to run migration code without a transaction.
-    public function up()
-    {
-
-    }
-
-    public function down()
-    {
-        echo "m200722_170151_addTbl__category_article cannot be reverted.\n";
-
-        return false;
-    }
-    */
 }

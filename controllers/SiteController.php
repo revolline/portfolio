@@ -3,13 +3,15 @@
 namespace app\controllers;
 
 use app\models\ContactForm;
+use app\models\helper\Result;
 use Yii;
+use yii\bootstrap\Html;
 use yii\filters\AccessControl;
+use yii\filters\ContentNegotiator;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
-use app\models\OLDContactForm;
 
 class SiteController extends Controller
 {
@@ -30,8 +32,17 @@ class SiteController extends Controller
                     ],
                 ],
             ],
+            'contentNegotiator' => [
+                'class' => ContentNegotiator::class,
+                'only' => [
+                    'send',
+                ],
+                'formats' => [
+                    'application/json' => Response::FORMAT_JSON,
+                ],
+            ],
             'verbs' => [
-                'class' => VerbFilter::className(),
+                'class' => VerbFilter::class,
                 'actions' => [
                     'logout' => ['post'],
                 ],
@@ -47,11 +58,7 @@ class SiteController extends Controller
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
-            ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
+            ]
         ];
     }
 
@@ -94,37 +101,16 @@ class SiteController extends Controller
     public function actionLogout()
     {
         Yii::$app->user->logout();
-
         return $this->goHome();
     }
+
     public function actionSend()
     {
-        $response = [];
         $model = new ContactForm();
         if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post()) && $model->save()) {
-            $response['success'] = true;
-            $response['message'] = 'Спасибо за заявку';
-        }else{
-            if (!empty($model->errors)){
-                foreach ($model->errors as $error) {
-                   $response['error'] = $error;
-                }
-            }else $response['message'] = 'Возникла ошибка';
-            $response['success'] = false;
+            return Result::json(true, 'Спасибо за заявку');
+        } else {
+            return Result::json(false, Html::errorSummary($model));
         }
-        $str =  \yii\helpers\Json::encode($response);
-        header('Content-Type: application/json;charset=utf-8');
-        echo $str;
-        exit;
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
     }
 }

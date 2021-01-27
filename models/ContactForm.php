@@ -3,11 +3,33 @@
 namespace app\models;
 
 use Yii;
-use yii\base\Model;
+use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
+use yii\db\Expression;
 
+/**
+ * @property int $id
+ * @property string|null $name
+ * @property string|null $dt
+ * @property string|null $phone
+ * @property string|null $email
+ * @property string|null $message
+ */
 class ContactForm extends ActiveRecord
 {
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::class,
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => 'dt'
+                ],
+                'value' => new Expression('NOW()'),
+            ]
+        ];
+    }
+
     public static function tableName()
     {
         return 'contact';
@@ -19,11 +41,8 @@ class ContactForm extends ActiveRecord
     public function rules()
     {
         return [
-            // name, email, subject and body are required
             [['name', 'email', 'message'], 'required'],
-            // email has to be a valid email address
             ['email', 'email'],
-            // verifyCode needs to be entered correctly
             [['phone', 'name'], 'string'],
             ['phone', 'match',
                 'pattern' => '/^(8)(\d{3})(\d{3})(\d{2})(\d{2})/',
@@ -44,11 +63,6 @@ class ContactForm extends ActiveRecord
             'message' => 'Сообщение',
         ];
     }
-    public function beforeValidate()
-    {
-        $this->dt = date('Y-m-d H:i');
-        return parent::beforeValidate();
-    }
 
     public function afterSave($insert, $changedAttributes)
     {
@@ -61,8 +75,7 @@ class ContactForm extends ActiveRecord
     public function send()
     {
         if ($this->validate()) {
-            $phone = ($this->phone != null or $this->phone != '') ?
-                "<div>Телефон: $this->phone</div>" : "";
+            $phone = (!empty($this->phone)) ? "<div>Телефон: $this->phone</div>" : "";
             $body = "<div>От кого: $this->email, $this->name.</div>
                     $phone
                     <div>Сообщение: $this->message</div>
@@ -70,7 +83,6 @@ class ContactForm extends ActiveRecord
             Yii::$app->mailer->compose()
                 ->setTo([Yii::$app->params['adminEmail']])
                 ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
-//                ->setReplyTo([$this->email => $this->name])
                 ->setSubject("Письмо с контактной формы")
                 ->setHtmlBody($body)
                 ->send();

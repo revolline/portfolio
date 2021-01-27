@@ -2,9 +2,26 @@
 
 namespace app\models;
 
+use Yii;
+use yii\base\Exception;
 use yii\db\ActiveRecord;
+use yii\web\IdentityInterface;
 
-class User extends ActiveRecord implements \yii\web\IdentityInterface
+/**
+ *
+ * @property-read mixed $authKey
+ * @property-write mixed $password
+ * @property-read mixed $id
+ * @property string $username [varchar(400)]
+ * @property string $password_hash [varchar(500)]
+ * @property string $name [varchar(400)]
+ * @property string $auth_key [varchar(500)]
+ * @property string $email [varchar(500)]
+ * @property string $created_at [datetime]
+ * @property int $active [int(1)]
+ * @property string $token [varchar(500)]
+ */
+class User extends ActiveRecord implements IdentityInterface
 {
     /**
      * {@inheritdoc}
@@ -73,11 +90,15 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
      */
     public function validatePassword($password)
     {
-        return \Yii::$app->security->validatePassword($password, $this->password_hash);
+        return Yii::$app->security->validatePassword($password, $this->password_hash);
     }
 
     public function setPassword($password)
     {
-        $this->password_hash = \Yii::$app->security->generatePasswordHash($password);
+        try {
+            $this->password_hash = Yii::$app->security->generatePasswordHash($password);
+        } catch (Exception $e) {
+            $this->password_hash = null;
+        }
     }
 }

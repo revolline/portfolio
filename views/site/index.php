@@ -79,7 +79,7 @@ $this->title = 'My Yii Application';
 
                         </ul>
                     </div>
-                    <div class="col-md-5 col-sm-12  header-left column-header-resize-height" >
+                    <div class="col-md-5 col-sm-12  header-left column-header-resize-height">
                         <div class="wrapper-photo">
                             <img src="/images/new/photo.jpg" alt="">
                         </div>
@@ -108,41 +108,6 @@ $this->title = 'My Yii Application';
                         </ul>
                     </div>
                 </div>
-                <?php
-                /*
-                 *       <div class="item">
-                    <div class="about-left-grid">
-                        <h2>Hi! I'm <span>Rob Lee</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut
-                            perspiciatis.</p>
-                        <ul>
-                            <li><a class="a-btn-a scroll" href="#port">My Work</a></li>
-                            <li><a class="a-btn-h scroll" href="#contact">Hire Me</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="about-left-grid">
-                        <h2>Hi! I'm <span>ROB LEE</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut
-                            perspiciatis.</p>
-                        <ul>
-                            <li><a class="a-btn-a scroll" href="#port">My Work</a></li>
-                            <li><a class="a-btn-h scroll" href="#contact">Hire Me</a></li>
-                        </ul>
-                    </div>
-                </div>
-                 */
-                ?>
-
             </div>
         </div>
         <div class="col-md-6 about-right">
@@ -161,7 +126,7 @@ $this->title = 'My Yii Application';
             </div>
             <!-- services-grids -->
             <div class="wthree_about_right_grids w3l-agile">
-                <div class="col-md-6 wthree_about_right_grid">
+                <div class="col-md-6 wthree_about_right_grid d-flex">
                     <div class="col-xs-4 wthree_about_right_grid_left">
                         <div class="hvr-rectangle-in">
                             <i class="glyphicon glyphicon-cog"></i>
@@ -169,8 +134,7 @@ $this->title = 'My Yii Application';
                     </div>
                     <div class="col-xs-8 wthree_about_right_grid_right">
                         <h4>Backend</h4>
-                        <p>PHP5, PHP7</p>
-                        <p>Фреймворк: Yii2</p>
+                        <p>PHP5, PHP7 (Yii2)</p>
                         <p>Python (bs4, Pandas, Django)</p>
                         <p>Паттерны проектирования</p>
                         <p>ООП</p>
@@ -178,7 +142,7 @@ $this->title = 'My Yii Application';
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="col-md-6 wthree_about_right_grid">
+                <div class="col-md-6 wthree_about_right_grid d-flex">
                     <div class="col-xs-4 wthree_about_right_grid_left">
                         <div class="hvr-rectangle-in">
                             <i class="glyphicon glyphicon-th"></i>
@@ -194,7 +158,7 @@ $this->title = 'My Yii Application';
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="col-md-6 wthree_about_right_grid">
+                <div class="col-md-6 wthree_about_right_grid d-flex">
                     <div class="col-xs-4 wthree_about_right_grid_left">
                         <div class="hvr-rectangle-in">
                             <i class="glyphicon glyphicon-inbox"></i>
@@ -210,7 +174,7 @@ $this->title = 'My Yii Application';
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="col-md-6 wthree_about_right_grid">
+                <div class="col-md-6 wthree_about_right_grid d-flex">
                     <div class="col-xs-4 wthree_about_right_grid_left">
                         <div class="hvr-rectangle-in">
                             <i class="glyphicon glyphicon-user"></i>
@@ -228,7 +192,7 @@ $this->title = 'My Yii Application';
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="col-md-6 wthree_about_right_grid">
+                <div class="col-md-6 wthree_about_right_grid d-flex">
                     <div class="col-xs-4 wthree_about_right_grid_left">
                         <div class="hvr-rectangle-in">
                             <i class="glyphicon glyphicon-tasks"></i>
@@ -237,16 +201,16 @@ $this->title = 'My Yii Application';
                     <div class="col-xs-8 wthree_about_right_grid_right">
                         <h4>Доп. навыки</h4>
                         <p>Чтение кода</p>
-                        <p>GIT, GITFLOW</p>
+                        <p>GIT</p>
                         <p>Docker</p>
-                        <p>Tasktrackers (YouTrack, Asana, Jira)</p>
+                        <p>Tasktrackers (YouTrack, Jira)</p>
                         <p>SEO-оптимизация</p>
                         <p>Стек LNMP</p>
                         <p>Wordpress, Opencart</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="col-md-6 wthree_about_right_grid">
+                <div class="col-md-6 wthree_about_right_grid d-flex">
                     <div class="col-xs-4 wthree_about_right_grid_left">
                         <div class="hvr-rectangle-in">
                             <i class="glyphicon glyphicon-dashboard"></i>
@@ -265,7 +229,6 @@ $this->title = 'My Yii Application';
                 </div>
                 <div class="clearfix"></div>
             </div>
-
             <!-- services-grids -->
         </div>
     </div>
@@ -274,12 +237,50 @@ $this->title = 'My Yii Application';
     <div id="work" class="work">
         <div class="container">
             <div class="service-head text-center">
-                <h4>Опыт</h4>
-                <h3>Мои <span>работы</span></h3>
+                <?php
+                try {
+                    $nowDate = new DateTime(date('Y-m-d'));
+                    $dateStart = new DateTime('2017-06-10');
+                    $interval = $nowDate->diff($dateStart);
+                    $year = (int)$interval->format('%Y');
+                    $mouth = (int)$interval->format('%m');
+                } catch (Exception $e) {
+                    $year = '3';
+                    $mouth = '7';
+                }
+                ?>
+                <h4><?= $year ?> года <?= $mouth ?> месяцев</h4>
+                <h3>Опыт <span>работы</span></h3>
                 <span class="border one"></span>
             </div>
             <div class="time-main w3l-agile">
                 <ul class="list">
+                    <li>
+                        <span></span>
+                        <div class="media">
+                            <div class="d-flex">
+                                <p>Ноябрь 2020 —<br> настоящее время</p>
+                            </div>
+                            <div class="media-body">
+                                <h4>WebTrade</h4>
+                                <p class="position">Програмист</p>
+                                <p>В связи с тем, что проект по автоматизации работы с facebook в WebTeam
+                                    был заморожен по причине смены курса направления рекламы (отказались от facebook),
+                                    была переведена на соседний проект по разработке сервиса аналитик продаж с
+                                    wildberries
+                                </p>
+                                <ul class="media-duties">
+                                    <li>Технологии: Yii2, nodejs, PostgreSql, RabbitMQ, HTML5/CSS3/jQuery/Bootstrap</li>
+                                    <li>разработка и проектирование сервиса по нотификации на nodejs/PostgreSql</li>
+                                    <li>разработка личного кабинета для пользователей</li>
+                                    <li>доработка внутренней системы администрирования, разработка интерфейсов
+                                        отчетности
+                                    </li>
+                                    <li>работа с АПИ, который является единственным звеном, взаимодействующим с БД</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                     <li>
                         <span></span>
                         <div class="media">
@@ -289,15 +290,16 @@ $this->title = 'My Yii Application';
                             <div class="media-body">
                                 <h4>WebTeam</h4>
                                 <p class="position">TeamLead</p>
-                                <p>Разрабатывался проект по автоматизации работы с фейсбуком под внутреннее пользование.
+                                <p>Проект по автоматизации загрузки рекламы на фейсбуке,
+                                    разрабатывался под внутреннее пользование.
                                 </p>
                                 <ul class="media-duties">
+                                    <li>Технологии: Yii2, nodejs, MySQL, HTML5/CSS3/jQuery/vue.js/Bootstrap</li>
                                     <li>Постановка и распределение задач между разработчиками</li>
                                     <li>Проведение код ревью</li>
                                     <li>Выстраивание процессов по работе отдела</li>
                                     <li>Управление командой разработчиков</li>
-                                    <li>Управление проектом, улучшение существующих решений</li>
-                                    <li>Разработка и поддержка проекта</li>
+                                    <li>Разработка и управление проектом, улучшение существующих решений</li>
                                     <li>Контроль над выполнением задач</li>
                                     <li>Разработка и проектирование баз данных (MySQL)</li>
                                     <li>Управление конфликтами</li>
@@ -316,38 +318,39 @@ $this->title = 'My Yii Application';
                                 <p class="position">Разработчик</p>
                                 <ul class="media-duties">
                                     <li>Проектирование, разработка и поддержка внутренних
-                                        вэб-сервисов компании (Backend: Yii2, Frontend: HTML5+CSS3+jQuery+Bootstrap4);
+                                        вэб-сервисов компании
                                     </li>
+                                    <li>Технологии: Yii2, MYSQL, HTML5/CSS3/jQuery/Bootstrap</li>
                                     <li> Проектирование, разработка API к сервисам компании (для
-                                        клиентов-организаций);
+                                        клиентов-организаций)
                                     </li>
                                     <li> Проектирование, разработка и поддержка международных веб-продуктов (
                                         (Pharmznanie, Medznanie, Pharmmarket, Кэшбэкотаптек, PharmaGlobal,
-                                        Pharmacourse);
+                                        Pharmacourse)
                                     </li>
-                                    <li> Разработка и проектирование баз данных (MySQL);</li>
-                                    <li> Администрирование баз данных;</li>
+                                    <li> Разработка и проектирование баз данных (MySQL)</li>
+                                    <li> Администрирование баз данных</li>
                                     <li> SEO-оптимизация веб-продуктов.</li>
                                 </ul>
                                 <p class="position">Старший разработчик с функциями Team Lead</p>
                                 <ul class="media-duties">
                                     <li>Проектирование, разработка и поддержка внутренних
-                                        вэб-сервисов компании (Backend: Yii2, Frontend: HTML5+CSS3+jQuery+Bootstrap4);
+                                        вэб-сервисов компании (Backend: Yii2, Frontend: HTML5+CSS3+jQuery+Bootstrap4)
                                     </li>
-                                    <li>Проектирование, разработка API к сервисам компании (для клиентов-организаций);
+                                    <li>Проектирование, разработка API к сервисам компании (для клиентов-организаций)
                                     </li>
                                     <li>Проектирование, разработка и поддержка международных веб-продуктов (
                                         (Pharmznanie, Medznanie, Pharmmarket, Кэшбэкотаптек, PharmaGlobal,
-                                        Pharmacourse);
+                                        Pharmacourse)
                                     </li>
-                                    <li>Разработка и проектирование баз данных (MySQL);</li>
-                                    <li>Администрирование баз данных;</li>
-                                    <li>SEO-оптимизация веб-продуктов;</li>
-                                    <li>Построение и управление циклом разработки;</li>
-                                    <li>Управление командой разработчиков (5 человек);</li>
-                                    <li>Анализ и распределение задач;</li>
-                                    <li>Code review членов команды разработки;</li>
-                                    <li>Составление технической документации;</li>
+                                    <li>Разработка и проектирование баз данных (MySQL)</li>
+                                    <li>Администрирование баз данных</li>
+                                    <li>SEO-оптимизация веб-продуктов</li>
+                                    <li>Построение и управление циклом разработки</li>
+                                    <li>Управление командой разработчиков (5 человек)</li>
+                                    <li>Анализ и распределение задач</li>
+                                    <li>Code review членов команды разработки</li>
+                                    <li>Составление технической документации</li>
                                     <li>Управление конфликтами.</li>
                                 </ul>
                             </div>
@@ -363,8 +366,8 @@ $this->title = 'My Yii Application';
                                 <h4>S-lite</h4>
                                 <p class="position">Web-программист</p>
                                 <ul class="media-duties">
-                                    <li>Разработка и доработка сайтов (CMS Wordpress, ModX, Opencart, PHP5);</li>
-                                    <li>Администрирование сайтов;</li>
+                                    <li>Разработка и доработка сайтов (CMS Wordpress, ModX, Opencart, PHP5)</li>
+                                    <li>Администрирование сайтов</li>
                                     <li> Подключение сайтов к системам управления</li>
                                     <li> Проектирование и разработка БД (MySQL)</li>
                                     <li> Верстка контента - баннеры, иконки и т.д. (Photoshop, CorelDraw)</li>
@@ -384,12 +387,12 @@ $this->title = 'My Yii Application';
                                 <h4>Аутсорсинг Маркетинга</h4>
                                 <p class="position">Web-программист</p>
                                 <ul class="media-duties">
-                                    <li>Разработка сайтов с нуля и доработка существующих (HTML, CSS, CMS Wordpress);
+                                    <li>Разработка сайтов с нуля и доработка существующих (HTML, CSS, CMS Wordpress)
                                     </li>
-                                    <li>Продвижение (SEO, SMM, Яндекс.Директ);</li>
-                                    <li>Администрирование сайтов;</li>
-                                    <li>Разработка контента для размещения на сайте;</li>
-                                    <li>Проектирование и разработка БД (MySQL);</li>
+                                    <li>Продвижение (SEO, SMM, Яндекс.Директ)</li>
+                                    <li>Администрирование сайтов</li>
+                                    <li>Разработка контента для размещения на сайте</li>
+                                    <li>Проектирование и разработка БД (MySQL)</li>
                                     <li>Сопровождение проектов, работа с заказчиками.</li>
                                 </ul>
                             </div>
@@ -409,7 +412,7 @@ $this->title = 'My Yii Application';
             <h3>Мои <span>работы</span></h3>
             <span class="border"></span>
         </div>
-        <div class="container"><?= \app\widgets\Portfolio::widget(); ?></div>
+        <div class="container"><?= \app\widgets\Portfolio::widget() ?></div>
 
     </div>
     <!-- //portfolio -->
@@ -501,7 +504,7 @@ $this->title = 'My Yii Application';
  */
 ?>
 
-    <a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    <a href="#home" id="toTop" style="display: block"> <span id="toTopHover" style="opacity: 1"> </span></a>
 
 <?php
 /*
@@ -536,7 +539,7 @@ $this->title = 'My Yii Application';
     <div class="modal-dialog about" role="document">
         <div class="modal-content about">
             <div class="modal-header">
-                <button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                <button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times</span>
                 </button>
             </div>
             <div class="modal-body about">

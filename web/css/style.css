@@ -2555,3 +2555,11 @@ block contact
     height: 400px;
     overflow: hidden;
 }
+.wthree_about_right_grid_right p:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e013";
+    display: inline-block;
+    color: #766dff99;
+    width: 25px;
+    height: 12px;
+}

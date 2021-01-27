@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Сайт-портфолио Кристины Стрельчук';
 ?>
     <!-- header -->
     <div id="home" class="header">

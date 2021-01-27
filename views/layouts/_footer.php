@@ -1,3 +1,8 @@
+<?php
+
+use app\widgets\Contact;
+
+?>
 <!-- /footer -->
 <div class="footer" id="contact">
     <div class="container">
@@ -40,7 +45,11 @@
                 <div class="clearfix"></div>
             </div>
             <div class="col-md-6 mail_right">
-                <?= \app\widgets\Contact::widget(); ?>
+                <?php
+                try {
+                    echo Contact::widget();
+                } catch (Exception $e) {
+                } ?>
             </div>
             <div class="clearfix"></div>
         </div>

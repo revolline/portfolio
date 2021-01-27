@@ -2,6 +2,8 @@
 
 /* @var $this yii\web\View */
 
+use app\widgets\Portfolio;
+
 $this->title = 'Сайт-портфолио Кристины Стрельчук';
 ?>
     <!-- header -->
@@ -77,6 +79,13 @@ $this->title = 'Сайт-портфолио Кристины Стрельчук'
                                 </ul>
                             </li>
 
+                        </ul>
+                        <ul class="social-icons social-icons-header two">
+                            <li><a href="https://t.me/nikkiwest" target="_blank"> </a></li>
+                            <li><a href="https://github.com/NikkiWest" target="_blank" class="fb"> </a></li>
+                            <li><a href="https://www.linkedin.com/in/kristina-strelchuk-05187b1aa" target="_blank" class="in"> </a></li>
+                            <li><a href="https://novosibirsk.hh.ru/resume/647013d4ff025151090039ed1f523268703564" target="_blank" class="dott"> </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-md-5 col-sm-12  header-left column-header-resize-height">
@@ -412,156 +421,12 @@ $this->title = 'Сайт-портфолио Кристины Стрельчук'
             <h3>Мои <span>работы</span></h3>
             <span class="border"></span>
         </div>
-        <div class="container"><?= \app\widgets\Portfolio::widget() ?></div>
+        <div class="container"><?php
+            try {
+                echo Portfolio::widget();
+            } catch (Exception $e) {
+            } ?></div>
 
     </div>
     <!-- //portfolio -->
-<?php
-/*
- * <!-- top-grids -->
-<div class="blog" id="blogs">
-    <div class="container">
-        <div class="service-head text-center">
-            <h4>Статьи</h4>
-            <h3>Мой <span>блог</span></h3>
-            <span class="border one"></span>
-        </div>
-        <div class="news-grid w3l-agile">
-            <div class="col-md-6 news-img">
-                <a href="#" data-toggle="modal" data-target="#myModal1"> <img src="/images/b1.jpg" alt=" "
-                                                                              class="img-responsive"></a>
-
-            </div>
-            <div class="col-md-6 news-text">
-                <h3><a href="#" data-toggle="modal" data-target="#myModal1">HERE GOES AN AWESOME BLOG TITLE</a></h3>
-                <ul class="news">
-                    <li><i class="glyphicon glyphicon-user"></i> <a href="#">Admin</a></li>
-                    <li><i class="glyphicon glyphicon-comment"></i> <a href="#">2 Comments</a></li>
-                    <li><i class="glyphicon glyphicon-heart"></i> <a href="#">50 Likes</a></li>
-                    <li><i class="glyphicon glyphicon-tags"></i> <a href="#">3 Tags</a></li>
-                </ul>
-                <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias
-                    consequatur aut perferendis doloribus asperiores repellat. Neque porro quisquam est, qui dolorem
-                    ipsum quia dolor sit amet.</p>
-                <a href="#" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Read
-                    More</a>
-
-            </div>
-
-            <div class="clearfix"></div>
-        </div>
-        <div class="news-grid">
-
-            <div class="col-md-6 news-text two">
-                <h3><a href="#" data-toggle="modal" data-target="#myModal1">HERE GOES AN AWESOME BLOG TITLE</a></h3>
-                <ul class="news">
-                    <li><i class="glyphicon glyphicon-user"></i> <a href="#">Admin</a></li>
-                    <li><i class="glyphicon glyphicon-comment"></i> <a href="#">2 Comments</a></li>
-                    <li><i class="glyphicon glyphicon-heart"></i> <a href="#">50 Likes</a></li>
-                    <li><i class="glyphicon glyphicon-tags"></i> <a href="#">3 Tags</a></li>
-                </ul>
-                <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias
-                    consequatur aut perferendis doloribus asperiores repellat. Neque porro quisquam est, qui dolorem
-                    ipsum quia dolor sit amet.</p>
-                <a href="#" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Read
-                    More</a>
-
-            </div>
-            <div class="col-md-6 news-img two">
-                <a href="#" data-toggle="modal" data-target="#myModal1"> <img src="/images/b2.jpg" alt=" "
-                                                                              class="img-responsive"></a>
-
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="news-grid">
-            <div class="col-md-6 news-img">
-                <a href="#" data-toggle="modal" data-target="#myModal1"> <img src="/images/b3.jpg" alt=" "
-                                                                              class="img-responsive"></a>
-
-            </div>
-            <div class="col-md-6 news-text">
-                <h3><a href="#" data-toggle="modal" data-target="#myModal1">HERE GOES AN AWESOME BLOG TITLE</a></h3>
-                <ul class="news">
-                    <li><i class="glyphicon glyphicon-user"></i> <a href="#">Admin</a></li>
-                    <li><i class="glyphicon glyphicon-comment"></i> <a href="#">2 Comments</a></li>
-                    <li><i class="glyphicon glyphicon-heart"></i> <a href="#">50 Likes</a></li>
-                    <li><i class="glyphicon glyphicon-tags"></i> <a href="#">3 Tags</a></li>
-                </ul>
-                <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias
-                    consequatur aut perferendis doloribus asperiores repellat. Neque porro quisquam est, qui dolorem
-                    ipsum quia dolor sit amet.</p>
-                <a href="#" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Read
-                    More</a>
-
-            </div>
-
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<!-- top-grids -->
- */
-?>
-
     <a href="#home" id="toTop" style="display: block"> <span id="toTopHover" style="opacity: 1"> </span></a>
-
-<?php
-/*
- * modal
- *
- * <!-- modal portfolio -->
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-                        <h3>Портфолио</h3>
-                        <img src="/images/pic4.jpg" class="img-responsive img-centered" alt="">
-                        <p>1 элемент</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- END modal portfolio -->
- *
- *
- * <!-- /blog-pop-->
-<div class="modal ab fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog about" role="document">
-        <div class="modal-content about">
-            <div class="modal-header">
-                <button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times</span>
-                </button>
-            </div>
-            <div class="modal-body about">
-                <div class="about">
-
-                    <div class="about-inner">
-
-                        <img src="/images/b3.jpg" alt="about"/>
-                        <h4 class="tittle">A Fews words about us</h4>
-                        <p>Lorem ipsum dolor sit amet Integer gravida,Lorem ipsum dolor sit amet Integer gravida
-                            velit,Ming sits in the corner the whole day. She's into crochet. quis dolor
-                            tristiqumsan.Mirum est notare quam littera gothica, quam nunc putamus parum claram,
-                            anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. velit
-                            quis dolor tristiqumsan.</p>
-                        <p>Lorem ipsum dolor sit amet. Integer gravida velit quis dolor tristiqumsan.anteposuerit
-                            litterarum formas humanitatis per seacula amet Integer gravida velit. </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- //blog-pop-->
- */

@@ -59,7 +59,7 @@ a:hover, a:focus {
 
 .logo span {
     border: 7px solid #766dff;
-    padding: 0px 14px;
+    padding: 0 14px;
     font-size: 1.2em;
     color: #fff;
 }
@@ -255,21 +255,22 @@ ul.address-text b {
 /*--social-icons--*/
 ul.social-icons {
     display: block;
-    padding: 0;
     background: #766dff;
     padding: 1.3em 0;
     text-align: center;
     margin: 0;
 }
 
+.social-icons-header{
+    text-align: left!important;
+}
 .social-icons li {
     display: inline-block;
     margin-right: 1%;
 }
 
 .social-icons li a {
-    /*background: url(../images/social-icons2.png) no-repeat 3px 3px;*/
-    background: url(../images/social-icons2.png) no-repeat 0px -5px;
+    background: url(../images/social-icons2.png) no-repeat 0 -5px;
     display: block;
     height: 32px;
     width: 32px;
@@ -294,15 +295,15 @@ ul.social-icons {
 }
 
 .social-icons li a.fb {
-    background-position: 0px -46px;
+    background-position: 0 -46px;
 }
 
 .social-icons li a.in {
-    background-position: 0px -88px;
+    background-position: 0 -88px;
 }
 
 .social-icons li a.dott {
-    background-position: 0px -130px;
+    background-position: 0 -130px;
 }
 
 .social-icons li a:hover::before {
@@ -1323,8 +1324,8 @@ ul.social-icons.two {
     background: none;
     width: 100%;
     color: #777;
-    padding: 18px 10px;
-    margin-bottom: 16px;
+    padding: 13px 10px;
+    margin-bottom: 15px;
     outline: none;
     border: 2px solid #766dff;
 }
@@ -2562,4 +2563,7 @@ block contact
     color: #766dff99;
     width: 25px;
     height: 12px;
+}
+.d-flex{
+    display: flex;
 }

@@ -1,5 +1,12 @@
-<?php \yii\widgets\Pjax::begin(['linkSelector' => false, 'id' => 'portfolio-grid-container']); ?>
-<?php //var_dump($type_id);?>
+<?php
+/**
+ * @var string $type_id
+ * @var array $types
+ * @var array $data
+ */
+use yii\widgets\Pjax;
+
+Pjax::begin(['linkSelector' => false, 'id' => 'portfolio-grid-container']); ?>
     <div class="portfolio-grids">
     <div class="sap_tabs">
         <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
@@ -30,8 +37,8 @@
         </div>
     </div>
 </div>
-<?php \yii\widgets\Pjax::end(); ?>
-<?php
+<?php Pjax::end();
+
 $script = <<< JS
 $(document).on("click", ".resp-tab-item", function (e) {
     e.preventDefault();

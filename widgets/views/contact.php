@@ -1,15 +1,23 @@
-<?php $form = \yii\widgets\ActiveForm::begin(['options' => ['id' => 'formSend'],
+<?php
+/**
+ * @var ContactForm $model
+ */
+
+use app\models\ContactForm;
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
+$form = ActiveForm::begin(['options' => ['id' => 'formSend'],
     'action' => ['site/send'],
-    //'enableAjaxValidation' => true
 ]) ?>
 <?php
 echo $form->field($model, 'name')->input('text', ['placeholder' => 'Имя', 'class' => ""])->label(false);
 echo $form->field($model, 'email')->input('email', ['placeholder' => 'Почта','class' => ""])->label(false);
 echo $form->field($model, 'phone')->input('text', ['placeholder' => 'Мобильный телефон','class' => ""])->label(false);
 echo $form->field($model, 'message')->textarea(['placeholder' => 'Сообщение...','class' => ""])->label(false);
-echo \yii\helpers\Html::submitButton("Отправить", ['class' => "submit"]);
+echo Html::submitButton("Отправить", ['class' => "submit"]);
 ?>
-<?php \yii\widgets\ActiveForm::end();?>
+<?php ActiveForm::end();?>
 <div id ="blockSuccessOrder" style="display: none">
     <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
      <p>Спасибо за ваше обращение!</p>
@@ -19,9 +27,7 @@ echo \yii\helpers\Html::submitButton("Отправить", ['class' => "submit"]
 $script = <<< JS
         $('body').on('beforeSubmit', 'form#formSend', function () {
             var form = $(this);
-            // return false if form still have some validation errors
             if (form.find('.has-error').length)  return false;
-            // submit form
             $.ajax({
             url    : form.attr('action'),
             type   : 'POST',

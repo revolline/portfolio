@@ -1,0 +1,21 @@
+FROM php:7.3-fpm 
+
+RUN apt update && apt -y dist-upgrade && apt -y install libzip-dev git unzip bzip2 libbz2-dev libc-client-dev libkrb5-dev
+
+RUN curl https://getcomposer.org/download/2.0.7/composer.phar -o /usr/local/bin/composer && chmod +x /usr/local/bin/composer \
+	&& composer self-update --2 \
+    && pecl install xdebug-2.7.1 \
+    && docker-php-ext-enable xdebug \
+	&& apt-get install -y libpq-dev \
+    && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
+    && docker-php-ext-install pdo pdo_pgsql pgsql \
+	&& apt-get install -y --no-install-recommends \
+   		libfreetype6-dev \
+    	libjpeg62-turbo-dev \
+    	libmagickwand-dev \
+   	&& apt-get install -y wkhtmltopdf \
+	&& docker-php-ext-install pdo_mysql zip \
+	&& docker-php-ext-install intl \
+	&& rm -rf /var/lib/apt/lists/*
+
+ADD ./docker/config/php.ini /usr/local/etc/php/php.ini

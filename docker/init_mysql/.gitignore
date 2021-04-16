@@ -1,0 +1,4 @@
+*
+!.gitignore             
+!00-create_databases.sql.bak
+!pharmznanie-skeleton.sql 

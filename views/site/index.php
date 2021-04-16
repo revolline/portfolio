@@ -143,7 +143,7 @@ $this->title = 'Сайт-портфолио Кристины Стрельчук'
                     </div>
                     <div class="col-xs-8 wthree_about_right_grid_right">
                         <h4>Backend</h4>
-                        <p>PHP5, PHP7 (Yii2)</p>
+                        <p>PHP5, PHP7 (Yii2), PHP8 (Yii3)</p>
                         <p>Python (bs4, Pandas, Django)</p>
                         <p>Паттерны проектирования</p>
                         <p>ООП</p>
@@ -175,7 +175,7 @@ $this->title = 'Сайт-портфолио Кристины Стрельчук'
                     </div>
                     <div class="col-xs-8 wthree_about_right_grid_right">
                         <h4>Базы данных</h4>
-                        <p>MYSQL, MSSQL, PostgreSQL</p>
+                        <p>MYSQL, PostgreSQL</p>
                         <p>Проектирование баз данных</p>
                         <p>Администрирование баз данных</p>
                         <p>Написание сложных sql-запросов</p>
@@ -212,9 +212,9 @@ $this->title = 'Сайт-портфолио Кристины Стрельчук'
                         <p>Чтение кода</p>
                         <p>GIT</p>
                         <p>Docker</p>
-                        <p>Tasktrackers (YouTrack, Jira)</p>
+                        <p>TaskTrackers (YouTrack, Jira)</p>
                         <p>SEO-оптимизация</p>
-                        <p>Стек LNMP</p>
+                        <p>Стек LNMP/LAPP</p>
                         <p>Wordpress, Opencart</p>
                     </div>
                     <div class="clearfix"></div>
@@ -232,7 +232,7 @@ $this->title = 'Сайт-портфолио Кристины Стрельчук'
                         <p>Ответственность</p>
                         <p>Исполнительность</p>
                         <p>Коммуникативность</p>
-                        <p>Английский (B1)</p>
+                        <p>Английский: pre-intermediate</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -268,24 +268,16 @@ $this->title = 'Сайт-портфолио Кристины Стрельчук'
                         <span></span>
                         <div class="media">
                             <div class="d-flex">
-                                <p>Ноябрь 2020 —<br> настоящее время</p>
+                                <p>Март 2021 —<br> настоящее время</p>
                             </div>
                             <div class="media-body">
-                                <h4>WebTrade</h4>
+                                <h4>Pharmznanie</h4>
                                 <p class="position">Програмист</p>
-                                <p>В связи с тем, что проект по автоматизации работы с facebook в WebTeam
-                                    был заморожен по причине смены курса направления компании (отказались от рекламы в facebook),
-                                    была переведена на смежный проект по разработке сервиса аналитики продаж с
-                                    wildberries
-                                </p>
                                 <ul class="media-duties">
-                                    <li>Технологии: Yii2, nodejs, PostgreSql, RabbitMQ, HTML5/CSS3/jQuery/Bootstrap</li>
-                                    <li>разработка и проектирование сервиса по нотификации на nodejs/PostgreSql</li>
-                                    <li>разработка личного кабинета для пользователей</li>
-                                    <li>доработка внутренней системы администрирования, разработка интерфейсов
-                                        отчетности
-                                    </li>
-                                    <li>работа с АПИ, которое является единственным звеном, взаимодействующим с БД</li>
+                                    <li><b>Технологии</b>: Yii2/Yii3, PostgreSql/MySql, RabbitMQ, GraphQl, PHP8</li>
+                                    <li>Поддержка и доработка сервисов на Yii2</li>
+                                    <li>Разработка сервисов на Yii3</li>
+                                    <li>Использование подхода DDD</li>
                                 </ul>
                             </div>
                         </div>
@@ -294,7 +286,7 @@ $this->title = 'Сайт-портфолио Кристины Стрельчук'
                         <span></span>
                         <div class="media">
                             <div class="d-flex">
-                                <p>Август 2020 —<br> ноябрь 2020</p>
+                                <p>Август 2020 —<br> февраль 2021</p>
                             </div>
                             <div class="media-body">
                                 <h4>WebTeam</h4>
@@ -303,7 +295,7 @@ $this->title = 'Сайт-портфолио Кристины Стрельчук'
                                     разрабатывался под внутреннее пользование.
                                 </p>
                                 <ul class="media-duties">
-                                    <li>Технологии: Yii2, nodejs, MySQL, HTML5/CSS3/jQuery/vue.js/Bootstrap</li>
+                                    <li><b>Технологии</b>: Yii2, nodejs, MySQL, HTML5/CSS3/jQuery/vue.js/Bootstrap</li>
                                     <li>Постановка и распределение задач между разработчиками</li>
                                     <li>Проведение код ревью</li>
                                     <li>Выстраивание процессов по работе отдела</li>
@@ -312,6 +304,23 @@ $this->title = 'Сайт-портфолио Кристины Стрельчук'
                                     <li>Контроль над выполнением задач</li>
                                     <li>Разработка и проектирование баз данных (MySQL)</li>
                                     <li>Управление конфликтами</li>
+                                </ul>
+                                <br>
+                                <h4>WebTrade</h4>
+                                <p class="position">Програмист</p>
+                                <p>В связи с тем, что проект по автоматизации работы с facebook в <b>WebTeam</b>
+                                    был заморожен по причине смены курса направления компании (отказались от рекламы в facebook),
+                                    была переведена на смежный проект по разработке сервиса аналитики продаж с
+                                    wildberries
+                                </p>
+                                <ul class="media-duties">
+                                    <li><b>Технологии</b>: Yii2, nodejs, PostgreSql, RabbitMQ, HTML5/CSS3/jQuery/Bootstrap</li>
+                                    <li>разработка и проектирование сервиса по нотификации на nodejs/PostgreSql</li>
+                                    <li>разработка личного кабинета для пользователей</li>
+                                    <li>доработка внутренней системы администрирования, разработка интерфейсов
+                                        отчетности
+                                    </li>
+                                    <li>работа с API, который является единственным звеном, взаимодействующим с БД</li>
                                 </ul>
                             </div>
                         </div>
